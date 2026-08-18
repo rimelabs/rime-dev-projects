@@ -33,10 +33,6 @@ VIDEO_BADGE = (
     "https://img.shields.io/badge/Watch-demo-6E56CF"
     "?style=flat&logo=playstation&logoColor=white"
 )
-WRITEUP_BADGE = (
-    "https://img.shields.io/badge/Read-write--up-6E56CF"
-    "?style=flat&logo=readthedocs&logoColor=white"
-)
 LINKEDIN_BADGE = (
     "https://img.shields.io/badge/LinkedIn-0A66C2"
     "?style=flat&logo=linkedin&logoColor=white"
@@ -109,24 +105,17 @@ def escape_cell(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ").strip()
 
 
-def link(label: str, url: str | None) -> str:
-    return f"[{escape_cell(label)}]({url})" if url else "—"
-
-
-def image_link(label: str, url: str, image_url: str) -> str:
-    return f'<a href="{url}"><img src="{image_url}" alt="{label}"></a>'
+def image_link(label: str, url: str, image_url: str, *, height: int | None = None) -> str:
+    size = f' height="{height}"' if height else ""
+    return f'<a href="{url}"><img src="{image_url}" alt="{label}"{size}></a>'
 
 
 def render_project(project: dict) -> str:
-    source = project["source_url"]
-    return (
-        f"**{link(project['name'], source)}**<br>"
-        f"{image_link('GitHub source', source, GITHUB_BADGE)}"
-    )
+    return f"**{escape_cell(project['name'])}**"
 
 
-def render_article(url: str | None) -> str:
-    return image_link("Read the project write-up", url, WRITEUP_BADGE) if url else "—"
+def render_repository(url: str) -> str:
+    return image_link("View source on GitHub", url, GITHUB_BADGE)
 
 
 def render_demo(url: str | None) -> str:
@@ -153,17 +142,20 @@ def render_team(project: dict) -> str:
                 f"{member['name']} on LinkedIn",
                 member["linkedin"],
                 LINKEDIN_BADGE,
+                height=16,
             )
         elif member.get("github"):
             profile = image_link(
                 f"{member['name']} on GitHub",
                 member["github"],
                 GITHUB_BADGE,
+                height=16,
             )
         else:
             profile = ""
-        members.append(f"{escape_cell(member['name'])}&nbsp;{profile}".rstrip())
-    return f"**{escape_cell(project['team_name'])}**<br>" + "<br>".join(members)
+        member_name = escape_cell(member["name"]).replace(" ", "&nbsp;")
+        members.append(f"•&nbsp;{member_name}&nbsp;{profile}".rstrip())
+    return f"**{escape_cell(project['team_name'])}**<br>" + " ".join(members)
 
 
 def render_catalog(projects: list[dict]) -> str:
@@ -180,7 +172,7 @@ def render_catalog(projects: list[dict]) -> str:
                 "",
                 f"### {escape_cell(event)}",
                 "",
-                "| Project | Brief executive summary | Article / write-up | Demo video | Team members |",
+                "| Project | Brief executive summary | Repository | Demo video | Team members |",
                 "| --- | --- | --- | --- | --- |",
             ]
         )
@@ -191,7 +183,7 @@ def render_catalog(projects: list[dict]) -> str:
                     [
                         render_project(project),
                         escape_cell(project["summary"]),
-                        render_article(project["article_url"]),
+                        render_repository(project["source_url"]),
                         render_demo(project["demo_video_url"]),
                         render_team(project),
                     ]
