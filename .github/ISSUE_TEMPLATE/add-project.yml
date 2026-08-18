@@ -1,0 +1,68 @@
+name: Add or update a project
+description: Propose a developer-event project for the Rime catalog.
+title: "[Project]: "
+labels:
+  - project-submission
+body:
+  - type: input
+    id: event
+    attributes:
+      label: Developer event
+      placeholder: Event name and year
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Public source repository
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Brief executive summary
+      description: In one or two sentences, explain what the project does and why voice matters.
+    validations:
+      required: true
+  - type: input
+    id: article
+    attributes:
+      label: Article or technical write-up
+      description: Optional. A repository README is acceptable.
+  - type: input
+    id: demo
+    attributes:
+      label: Demo video
+      description: Optional. YouTube, Loom, or a publicly viewable recording.
+  - type: textarea
+    id: team
+    attributes:
+      label: Team members
+      description: List each member’s name and LinkedIn URL. Add a GitHub URL when LinkedIn is unavailable.
+    validations:
+      required: true
+  - type: textarea
+    id: rime
+    attributes:
+      label: How the project uses Rime
+      description: Point to the primary voice flow and the relevant source files.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Publication checks
+      options:
+        - label: Rime-generated speech is a meaningful part of the primary product experience.
+          required: true
+        - label: The linked repository does not contain live credentials or private data.
+          required: true
+        - label: The builders consent to publishing the submitted names and profile links.
+          required: true

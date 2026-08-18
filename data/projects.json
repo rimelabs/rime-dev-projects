@@ -1,0 +1,334 @@
+[
+  {
+    "slug": "continuum-voice-commerce",
+    "name": "Continuum",
+    "team_name": "Omnicient",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 1,
+    "source_url": "https://github.com/irohitsharma21/hack_voice",
+    "article_url": "https://github.com/irohitsharma21/hack_voice#readme",
+    "demo_video_url": "https://drive.google.com/file/d/1SUXZNfavcut8Enmop85HiRxJWTlMSTWn/view?usp=sharing",
+    "summary": "A multilingual voice-commerce agent that preserves a customer’s cart across disconnected calls and reconciles interruptions with the words the caller actually heard.",
+    "team_members": [
+      {
+        "name": "Rohit Sharma",
+        "linkedin": "https://www.linkedin.com/in/irohitsharma21/",
+        "github": "https://github.com/irohitsharma21"
+      }
+    ]
+  },
+  {
+    "slug": "roger-ai",
+    "name": "Roger AI",
+    "team_name": "Suspended",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 2,
+    "source_url": "https://github.com/Sahil-coder-30/Flight_Prep_Voice_Agent",
+    "article_url": "https://github.com/Sahil-coder-30/Flight_Prep_Voice_Agent#readme",
+    "demo_video_url": "https://drive.google.com/file/d/1ZcEv2r2W9IuRClMPy-Tv5-ten1NBiCam/view?usp=sharing",
+    "summary": "An air-traffic-control training simulator that gives pilots a voice-native practice environment grounded in FAA and ICAO material, with layered caching to keep exchanges responsive.",
+    "team_members": [
+      {
+        "name": "Sahil Sharma",
+        "linkedin": null,
+        "github": "https://github.com/Sahil-coder-30"
+      },
+      {
+        "name": "Aryan Singh",
+        "linkedin": null,
+        "github": "https://github.com/Coder-Aryan09"
+      },
+      {
+        "name": "Shreyansh Shekhar Dwivedi",
+        "linkedin": "https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320/",
+        "github": "https://github.com/sshekhar-04"
+      }
+    ]
+  },
+  {
+    "slug": "fieldmate",
+    "name": "FieldMate",
+    "team_name": "Syntax Syndicate",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 3,
+    "source_url": "https://github.com/esotericdunce/FieldMate",
+    "article_url": "https://github.com/esotericdunce/FieldMate#readme",
+    "demo_video_url": null,
+    "summary": "A hands-free PC troubleshooting assistant that combines live voice, camera input, and persistent diagnostic memory for technicians working away from a keyboard.",
+    "team_members": [
+      {
+        "name": "Arsh Bhardwaj",
+        "linkedin": null,
+        "github": "https://github.com/esotericdunce"
+      },
+      {
+        "name": "BaXter",
+        "linkedin": null,
+        "github": "https://github.com/elgyro"
+      }
+    ]
+  },
+  {
+    "slug": "jan-vaani",
+    "name": "Jan Vaani",
+    "team_name": "Devastators",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 4,
+    "source_url": "https://github.com/SahityaThakurela/Jan-Vaani",
+    "article_url": "https://github.com/SahityaThakurela/Jan-Vaani#readme",
+    "demo_video_url": null,
+    "summary": "A multilingual welfare-access assistant that uses voice for intake and a deterministic rules engine to produce auditable government-scheme eligibility guidance.",
+    "team_members": [
+      {
+        "name": "Sambhav Gupta",
+        "linkedin": "https://www.linkedin.com/in/sambhav-gupta-494347369",
+        "github": "https://github.com/Sambhav-Gupta12"
+      },
+      {
+        "name": "Sahitya Thakurela",
+        "linkedin": "https://www.linkedin.com/in/sahitya-thakurela-9b6b4b368/",
+        "github": "https://github.com/SahityaThakurela"
+      },
+      {
+        "name": "Aaryan Singh",
+        "linkedin": "https://www.linkedin.com/in/aaryansingh31/",
+        "github": "https://github.com/AaryanSingh31"
+      },
+      {
+        "name": "pragati232007-del",
+        "linkedin": null,
+        "github": "https://github.com/pragati232007-del"
+      }
+    ]
+  },
+  {
+    "slug": "saathi-medication-check-ins",
+    "name": "Saathi",
+    "team_name": "AceCoders",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 5,
+    "source_url": "https://github.com/theadivai/Sathi",
+    "article_url": "https://github.com/theadivai/Sathi#readme",
+    "demo_video_url": null,
+    "summary": "A family medication check-in system that places multilingual phone calls, remembers adherence, and escalates to caregivers using explicit thresholds.",
+    "team_members": [
+      {
+        "name": "shivasharma-bit",
+        "linkedin": null,
+        "github": "https://github.com/shivasharma-bit"
+      },
+      {
+        "name": "VaishaleeSingh",
+        "linkedin": null,
+        "github": "https://github.com/VaishaleeSingh"
+      }
+    ]
+  },
+  {
+    "slug": "eira",
+    "name": "EIRA",
+    "team_name": "Spark",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 6,
+    "source_url": "https://github.com/SPKaditya/EIRA",
+    "article_url": "https://github.com/SPKaditya/EIRA#readme",
+    "demo_video_url": "https://youtu.be/KCWBykuqW8o",
+    "summary": "A proactive voice companion that turns wellness signals and conversational memory into explained nudges, with visible evidence and consent-aware escalation.",
+    "team_members": [
+      {
+        "name": "Aditya Sharma",
+        "linkedin": null,
+        "github": "https://github.com/SPKaditya"
+      }
+    ]
+  },
+  {
+    "slug": "nova-industrial-safety",
+    "name": "NOVA",
+    "team_name": "dotbin (.bin)",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 7,
+    "source_url": "https://github.com/sachdeva-aarushi/nova",
+    "article_url": "https://github.com/sachdeva-aarushi/nova#readme",
+    "demo_video_url": null,
+    "summary": "An industrial-safety agent that correlates live signals, retrieves incident memory, explains compound risks, asks for authorization, and learns from resolved cases.",
+    "team_members": [
+      {
+        "name": "Aarushi Sachdeva",
+        "linkedin": "https://www.linkedin.com/in/aarushi-sachdeva-aa7609378/",
+        "github": "https://github.com/sachdeva-aarushi"
+      },
+      {
+        "name": "Hitendra Dhapola",
+        "linkedin": "https://www.linkedin.com/in/hitendra-dhapola-952854368",
+        "github": "https://github.com/j25aiml192-hash"
+      },
+      {
+        "name": "saitee",
+        "linkedin": null,
+        "github": "https://github.com/saitee5"
+      },
+      {
+        "name": "Kartik Thakur",
+        "linkedin": "https://www.linkedin.com/in/kartik-thakur-b2b826332",
+        "github": "https://github.com/kartikthhakur07"
+      }
+    ]
+  },
+  {
+    "slug": "vaani-health-companion",
+    "name": "Vaani",
+    "team_name": "Cumbrous",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 8,
+    "source_url": "https://github.com/ShreyanshShri/vaani",
+    "article_url": "https://github.com/ShreyanshShri/vaani#readme",
+    "demo_video_url": null,
+    "summary": "A multilingual health companion that combines streaming voice interaction with structured records and semantic memory for persistent follow-up conversations.",
+    "team_members": [
+      {
+        "name": "Shreyansh Shrivastva",
+        "linkedin": null,
+        "github": "https://github.com/ShreyanshShri"
+      },
+      {
+        "name": "Shreyansh Pandey",
+        "linkedin": null,
+        "github": "https://github.com/Shreyansh0711"
+      },
+      {
+        "name": "Praveen Kumar",
+        "linkedin": "https://www.linkedin.com/in/praveen-kumar-368959329/",
+        "github": "https://github.com/praveenkumar-co"
+      }
+    ]
+  },
+  {
+    "slug": "aarvi",
+    "name": "AARVI",
+    "team_name": "git_ignore",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 9,
+    "source_url": "https://github.com/parkhhi15/aarvi_modelcheck",
+    "article_url": "https://github.com/parkhhi15/aarvi_modelcheck#readme",
+    "demo_video_url": "https://drive.google.com/file/d/1Sf_TcIEpDaXeV31ZdVGcIw6ohXIebVNi/view?usp=drivesdk",
+    "summary": "A voice receptionist for healthcare websites that guides patient intake, answers common questions, and routes requests through a spoken interface.",
+    "team_members": [
+      {
+        "name": "Parkhhi Saxena",
+        "linkedin": null,
+        "github": "https://github.com/parkhhi15"
+      },
+      {
+        "name": "Suhani",
+        "linkedin": null,
+        "github": "https://github.com/techwhirl01"
+      }
+    ]
+  },
+  {
+    "slug": "continuum-interview-practice",
+    "name": "Continuum — Interview Practice",
+    "team_name": "Binary Brains",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 10,
+    "source_url": "https://github.com/ujjwalverma-dev/continue-where-i-left-off",
+    "article_url": "https://github.com/ujjwalverma-dev/continue-where-i-left-off#readme",
+    "demo_video_url": "https://youtu.be/kdfuuF3q84I",
+    "summary": "A voice-first interview-practice experience that saves a learner’s progress and resumes the conversation from where the previous session ended.",
+    "team_members": [
+      {
+        "name": "Ujjwal Verma",
+        "linkedin": null,
+        "github": "https://github.com/ujjwalverma-dev"
+      },
+      {
+        "name": "justdhruvv",
+        "linkedin": null,
+        "github": "https://github.com/justdhruvv"
+      }
+    ]
+  },
+  {
+    "slug": "wagelens",
+    "name": "WageLens",
+    "team_name": "cin>>errs",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 11,
+    "source_url": "https://github.com/i-ayushh18/WageLens",
+    "article_url": "https://github.com/i-ayushh18/WageLens#readme",
+    "demo_video_url": "https://youtu.be/SvG1HuaTTmQ",
+    "summary": "A voice-assisted wage-rights checker that captures employment details and presents eligibility guidance in a more accessible spoken flow.",
+    "team_members": [
+      {
+        "name": "Ayush Verma",
+        "linkedin": "https://www.linkedin.com/in/ayushverma18",
+        "github": "https://github.com/i-ayushh18"
+      },
+      {
+        "name": "decipher",
+        "linkedin": null,
+        "github": "https://github.com/decipher3114"
+      }
+    ]
+  },
+  {
+    "slug": "nuvia",
+    "name": "Nuvia",
+    "team_name": "VoxVerse",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 12,
+    "source_url": "https://github.com/Dakshchandia/Nuvia",
+    "article_url": "https://github.com/Dakshchandia/Nuvia#readme",
+    "demo_video_url": null,
+    "summary": "A bilingual health companion for symptom journaling and follow-up conversations, with persistent memory and an offline fallback for demonstrations.",
+    "team_members": [
+      {
+        "name": "Daksh Chandia",
+        "linkedin": null,
+        "github": "https://github.com/Dakshchandia"
+      },
+      {
+        "name": "divyanshu192006",
+        "linkedin": null,
+        "github": "https://github.com/divyanshu192006"
+      }
+    ]
+  },
+  {
+    "slug": "routinecraft-ai",
+    "name": "RoutineCraft AI",
+    "team_name": "Risers4",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 13,
+    "source_url": "https://github.com/Akshat-builds433/RoutineCraftAI",
+    "article_url": "https://github.com/Akshat-builds433/RoutineCraftAI#readme",
+    "demo_video_url": null,
+    "summary": "A voice-assisted timetable planner that speaks responses clause by clause for faster perceived feedback and supports interruption during playback.",
+    "team_members": [
+      {
+        "name": "Akshat-builds433",
+        "linkedin": null,
+        "github": "https://github.com/Akshat-builds433"
+      }
+    ]
+  },
+  {
+    "slug": "vira",
+    "name": "VIRA",
+    "team_name": "Bro_code",
+    "event": "StarForge 2026 — VoxForge",
+    "event_order": 14,
+    "source_url": "https://github.com/upshivansh2006-cell/VIRA-Finale",
+    "article_url": "https://github.com/upshivansh2006-cell/VIRA-Finale#readme",
+    "demo_video_url": "https://drive.google.com/file/d/1xhxP2ifcK_A39g3xGHJTB69JHmA5JLFS/view?usp=drivesdk",
+    "summary": "A voice safety assistant that retrieves a relevant protocol and speaks concise guidance for the situation described by the user.",
+    "team_members": [
+      {
+        "name": "upshivansh2006-cell",
+        "linkedin": null,
+        "github": "https://github.com/upshivansh2006-cell"
+      }
+    ]
+  }
+]
