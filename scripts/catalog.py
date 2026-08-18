@@ -23,6 +23,25 @@ REQUIRED_FIELDS = {
     "team_members",
 }
 
+GITHUB_BADGE = "https://badges.aleen42.com/src/github.svg"
+YOUTUBE_BADGE = "https://badges.aleen42.com/src/youtube.svg"
+DRIVE_BADGE = (
+    "https://img.shields.io/badge/Google_Drive-4285F4"
+    "?style=flat&logo=googledrive&logoColor=white"
+)
+VIDEO_BADGE = (
+    "https://img.shields.io/badge/Watch-demo-6E56CF"
+    "?style=flat&logo=playstation&logoColor=white"
+)
+WRITEUP_BADGE = (
+    "https://img.shields.io/badge/Read-write--up-6E56CF"
+    "?style=flat&logo=readthedocs&logoColor=white"
+)
+LINKEDIN_BADGE = (
+    "https://img.shields.io/badge/LinkedIn-0A66C2"
+    "?style=flat&logo=linkedin&logoColor=white"
+)
+
 
 def load_projects() -> list[dict]:
     return json.loads(DATA_PATH.read_text(encoding="utf-8"))
@@ -94,16 +113,57 @@ def link(label: str, url: str | None) -> str:
     return f"[{escape_cell(label)}]({url})" if url else "—"
 
 
+def image_link(label: str, url: str, image_url: str) -> str:
+    return f'<a href="{url}"><img src="{image_url}" alt="{label}"></a>'
+
+
+def render_project(project: dict) -> str:
+    source = project["source_url"]
+    return (
+        f"**{link(project['name'], source)}**<br>"
+        f"{image_link('GitHub source', source, GITHUB_BADGE)}"
+    )
+
+
+def render_article(url: str | None) -> str:
+    return image_link("Read the project write-up", url, WRITEUP_BADGE) if url else "—"
+
+
+def render_demo(url: str | None) -> str:
+    if not url:
+        return "—"
+    hostname = urlparse(url).netloc.lower()
+    if "youtu.be" in hostname or "youtube.com" in hostname:
+        badge = YOUTUBE_BADGE
+        label = "Watch on YouTube"
+    elif "drive.google.com" in hostname:
+        badge = DRIVE_BADGE
+        label = "Watch on Google Drive"
+    else:
+        badge = VIDEO_BADGE
+        label = "Watch the demo"
+    return image_link(label, url, badge)
+
+
 def render_team(project: dict) -> str:
     members: list[str] = []
     for member in project["team_members"]:
         if member.get("linkedin"):
-            members.append(link(member["name"], member["linkedin"]))
+            profile = image_link(
+                f"{member['name']} on LinkedIn",
+                member["linkedin"],
+                LINKEDIN_BADGE,
+            )
         elif member.get("github"):
-            members.append(f"{link(member['name'], member['github'])} _(GitHub)_")
+            profile = image_link(
+                f"{member['name']} on GitHub",
+                member["github"],
+                GITHUB_BADGE,
+            )
         else:
-            members.append(escape_cell(member["name"]))
-    return f"**{escape_cell(project['team_name'])}**<br>" + " · ".join(members)
+            profile = ""
+        members.append(f"{escape_cell(member['name'])}&nbsp;{profile}".rstrip())
+    return f"**{escape_cell(project['team_name'])}**<br>" + "<br>".join(members)
 
 
 def render_catalog(projects: list[dict]) -> str:
@@ -129,10 +189,10 @@ def render_catalog(projects: list[dict]) -> str:
                 "| "
                 + " | ".join(
                     [
-                        link(project["name"], project["source_url"]),
+                        render_project(project),
                         escape_cell(project["summary"]),
-                        link("Read", project["article_url"]),
-                        link("Watch", project["demo_video_url"]),
+                        render_article(project["article_url"]),
+                        render_demo(project["demo_video_url"]),
                         render_team(project),
                     ]
                 )
