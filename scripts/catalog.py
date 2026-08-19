@@ -13,14 +13,24 @@ END_MARKER = "<!-- PROJECTS:END -->"
 REQUIRED_FIELDS = {
     "slug",
     "name",
+    "project_type",
     "team_name",
     "event",
     "event_order",
     "source_url",
     "article_url",
+    "live_demo_url",
     "demo_video_url",
     "summary",
     "team_members",
+}
+PROJECT_TYPES = {
+    "Application",
+    "Integration",
+    "Adapter",
+    "Evaluation resource",
+    "Developer tool",
+    "Reference example",
 }
 
 GITHUB_BADGE = "https://badges.aleen42.com/src/github.svg"
@@ -32,6 +42,10 @@ DRIVE_BADGE = (
 VIDEO_BADGE = (
     "https://img.shields.io/badge/Watch-demo-6E56CF"
     "?style=flat&logo=playstation&logoColor=white"
+)
+LIVE_BADGE = (
+    "https://img.shields.io/badge/Try_live-4F46E5"
+    "?style=flat&logo=googlechrome&logoColor=white"
 )
 LINKEDIN_BADGE = (
     "https://img.shields.io/badge/LinkedIn-0A66C2"
@@ -72,10 +86,14 @@ def validate_projects(projects: list[dict]) -> list[str]:
         if not isinstance(project["event_order"], int) or project["event_order"] < 1:
             errors.append(f"{label}: event_order must be a positive integer")
 
+        if project["project_type"] not in PROJECT_TYPES:
+            allowed = ", ".join(sorted(PROJECT_TYPES))
+            errors.append(f"{label}: project_type must be one of: {allowed}")
+
         if not is_http_url(project["source_url"]):
             errors.append(f"{label}: source_url must be an HTTP(S) URL")
 
-        for field in ("article_url", "demo_video_url"):
+        for field in ("article_url", "live_demo_url", "demo_video_url"):
             value = project[field]
             if value is not None and not is_http_url(value):
                 errors.append(f"{label}: {field} must be null or an HTTP(S) URL")
@@ -122,10 +140,14 @@ def render_repository(url: str) -> str:
     )
 
 
-def render_demo(url: str | None) -> str:
-    if not url:
-        return "—"
-    hostname = urlparse(url).netloc.lower()
+def render_demo(live_url: str | None, video_url: str | None) -> str:
+    links: list[str] = []
+    if live_url:
+        links.append(image_link("Try the live demo", live_url, LIVE_BADGE))
+
+    if not video_url:
+        return "<br>".join(links) if links else "—"
+    hostname = urlparse(video_url).netloc.lower()
     if "youtu.be" in hostname or "youtube.com" in hostname:
         badge = YOUTUBE_BADGE
         label = "Watch on YouTube"
@@ -135,7 +157,8 @@ def render_demo(url: str | None) -> str:
     else:
         badge = VIDEO_BADGE
         label = "Watch the demo"
-    return image_link(label, url, badge)
+    links.append(image_link(label, video_url, badge))
+    return "<br>".join(links)
 
 
 def render_team(project: dict) -> str:
@@ -174,7 +197,7 @@ def render_catalog(projects: list[dict]) -> str:
                 "",
                 f"### {escape_cell(event)}",
                 "",
-                "| Project | Brief executive summary | Repository | Demo video | Team members |",
+                "| Project | Brief executive summary | Repository | Demo | Team members |",
                 "| --- | --- | --- | --- | --- |",
             ]
         )
@@ -186,7 +209,7 @@ def render_catalog(projects: list[dict]) -> str:
                         render_project(project),
                         escape_cell(project["summary"]),
                         render_repository(project["source_url"]),
-                        render_demo(project["demo_video_url"]),
+                        render_demo(project["live_demo_url"], project["demo_video_url"]),
                         render_team(project),
                     ]
                 )

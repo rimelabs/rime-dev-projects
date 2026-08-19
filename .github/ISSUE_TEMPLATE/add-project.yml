@@ -16,6 +16,19 @@ body:
       label: Project name
     validations:
       required: true
+  - type: dropdown
+    id: project_type
+    attributes:
+      label: Project type
+      options:
+        - Application
+        - Integration
+        - Adapter
+        - Evaluation resource
+        - Developer tool
+        - Reference example
+    validations:
+      required: true
   - type: input
     id: repository
     attributes:
@@ -36,6 +49,11 @@ body:
       label: Article or technical write-up
       description: Optional. A repository README is acceptable.
   - type: input
+    id: live_demo
+    attributes:
+      label: Live demo
+      description: Optional. A publicly accessible experience people can try.
+  - type: input
     id: demo
     attributes:
       label: Demo video
@@ -50,8 +68,8 @@ body:
   - type: textarea
     id: rime
     attributes:
-      label: How the project uses Rime
-      description: Point to the primary voice flow and the relevant source files.
+      label: How the project uses or supports Rime
+      description: Point to the primary voice flow, integration, or relevant source files.
     validations:
       required: true
   - type: checkboxes
