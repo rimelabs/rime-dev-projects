@@ -2,7 +2,7 @@
 
 # Voice AI with Rime
 
-Developers made these voice projects with Rime at events and in the community.
+A collection of voice applications built by the voice AI developer community with Rime and other voice technologies.
 
 [Rime](https://www.rime.ai/) · [Documentation](https://docs.rime.ai/) · [Get an API key](https://app.rime.ai/) · [Add a project](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml)
 
@@ -36,7 +36,7 @@ Each project stays in its builder's repository. This catalog links to public sou
 
 ## Add a project
 
-Open an [add-project request](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml) or submit a pull request. We accept event projects, community projects, integrations, and tools that use Rime.
+Open an [add-project request](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml) or submit a pull request. You can contribute integrations, best practices, tools, or any project where voice is a meaningful part of the application.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the catalog format and test commands.
 
