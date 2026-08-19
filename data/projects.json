@@ -358,5 +358,25 @@
         "github": "https://github.com/upshivansh2006-cell"
       }
     ]
+  },
+  {
+    "slug": "rime-voice-demo-ai4-booth-edition",
+    "name": "Rime Voice Demo: AI4 Booth Edition",
+    "project_type": "Application",
+    "team_name": "Rime",
+    "event": "AI4 2026",
+    "event_order": 1,
+    "source_url": "https://github.com/ankit1khare/rime-voice-agent",
+    "article_url": "https://github.com/ankit1khare/rime-voice-agent#readme",
+    "demo_video_url": null,
+    "live_demo_url": null,
+    "summary": "A conference booth demo where visitors choose an industry and Rime voice, then talk with a LiveKit agent that supports natural turn-taking and interruptions.",
+    "team_members": [
+      {
+        "name": "Ankit Khare",
+        "linkedin": null,
+        "github": "https://github.com/ankit1khare"
+      }
+    ]
   }
 ]

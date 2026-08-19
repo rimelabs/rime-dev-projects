@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -32,6 +33,7 @@ PROJECT_TYPES = {
     "Developer tool",
     "Reference example",
 }
+SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 GITHUB_BADGE = "https://badges.aleen42.com/src/github.svg"
 YOUTUBE_BADGE = "https://badges.aleen42.com/src/youtube.svg"
@@ -67,6 +69,7 @@ def is_http_url(value: object) -> bool:
 def validate_projects(projects: list[dict]) -> list[str]:
     errors: list[str] = []
     slugs: set[str] = set()
+    event_orders: set[tuple[str, int]] = set()
 
     if not projects:
         return ["The catalog must contain at least one project."]
@@ -79,14 +82,27 @@ def validate_projects(projects: list[dict]) -> list[str]:
             continue
 
         slug = project["slug"]
-        if slug in slugs:
-            errors.append(f"{label}: duplicate slug")
-        slugs.add(slug)
+        if not isinstance(slug, str) or not SLUG_PATTERN.fullmatch(slug):
+            errors.append(f"{label}: slug must contain lowercase letters, numbers, and single hyphens")
+        else:
+            if slug in slugs:
+                errors.append(f"{label}: duplicate slug")
+            slugs.add(slug)
+
+        for field in ("name", "team_name", "event"):
+            value = project[field]
+            if not isinstance(value, str) or not value.strip():
+                errors.append(f"{label}: {field} must be a non-empty string")
 
         if not isinstance(project["event_order"], int) or project["event_order"] < 1:
             errors.append(f"{label}: event_order must be a positive integer")
+        elif isinstance(project["event"], str):
+            event_key = (project["event"], project["event_order"])
+            if event_key in event_orders:
+                errors.append(f"{label}: duplicate event_order for {project['event']}")
+            event_orders.add(event_key)
 
-        if project["project_type"] not in PROJECT_TYPES:
+        if not isinstance(project["project_type"], str) or project["project_type"] not in PROJECT_TYPES:
             allowed = ", ".join(sorted(PROJECT_TYPES))
             errors.append(f"{label}: project_type must be one of: {allowed}")
 
@@ -111,6 +127,8 @@ def validate_projects(projects: list[dict]) -> list[str]:
             if not isinstance(member, dict) or not member.get("name"):
                 errors.append(f"{member_label}: name is required")
                 continue
+            if not member.get("linkedin") and not member.get("github"):
+                errors.append(f"{member_label}: a LinkedIn or GitHub URL is required")
             for field in ("linkedin", "github"):
                 value = member.get(field)
                 if value is not None and not is_http_url(value):
