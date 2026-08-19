@@ -146,7 +146,7 @@ def render_demo(live_url: str | None, video_url: str | None) -> str:
         links.append(image_link("Try the live demo", live_url, LIVE_BADGE))
 
     if not video_url:
-        return "<br>".join(links) if links else "—"
+        return "<br>".join(links)
     hostname = urlparse(video_url).netloc.lower()
     if "youtu.be" in hostname or "youtube.com" in hostname:
         badge = YOUTUBE_BADGE
@@ -190,14 +190,14 @@ def render_catalog(projects: list[dict]) -> str:
     for project in projects:
         grouped.setdefault(project["event"], []).append(project)
 
-    chunks = [f"_Featuring {len(projects)} projects._"]
+    chunks: list[str] = []
     for event, event_projects in grouped.items():
         chunks.extend(
             [
                 "",
                 f"### {escape_cell(event)}",
                 "",
-                "| Project | Brief executive summary | Repository | Demo | Team members |",
+                "| Project | What it does | Repository | Demo | Team members |",
                 "| --- | --- | --- | --- | --- |",
             ]
         )
