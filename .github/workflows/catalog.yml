@@ -26,3 +26,6 @@ jobs:
 
       - name: Check generated README
         run: python3 scripts/render_catalog.py --check
+
+      - name: Test contribution CLI
+        run: python3 -m unittest discover -s tests

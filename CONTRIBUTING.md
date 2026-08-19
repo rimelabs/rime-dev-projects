@@ -26,12 +26,37 @@ Articles, live demos, and demo videos are encouraged but not required. LinkedIn 
 
 ## Add a project
 
-1. Add one object to [`data/projects.json`](data/projects.json).
-2. Run `python3 scripts/render_catalog.py` to update the README.
-3. Run `python3 scripts/check_catalog.py`.
-4. Open a pull request that explains where the project came from and how it uses voice.
+Project code stays in the builder's repository. This repository stores only the catalog entry.
+
+1. Copy [`data/project.example.json`](data/project.example.json) to a temporary file.
+2. Replace the example values with facts from the project repository.
+3. Run `python3 scripts/add_project.py --file /path/to/project.json`.
+4. Run `make check`.
+5. Review the generated README row and open a pull request.
 
 For an independent submission, use `Community projects` as the event. Choose one of the project types accepted by the catalog validator. Use `null` for an unavailable article, live demo, demo video, or LinkedIn URL. Keep the executive summary to one or two concrete sentences. Describe what the project does, how it uses voice, and why the work is useful.
+
+The add script creates the slug and event order. The input format is defined in [`data/project.schema.json`](data/project.schema.json).
+
+### External CLI workflow
+
+Contributors without write access can use a fork:
+
+```bash
+gh repo fork rimelabs/rime-dev-projects --clone
+cd rime-dev-projects
+git switch -c add-project-name
+cp data/project.example.json /tmp/project.json
+# Edit /tmp/project.json with project details.
+python3 scripts/add_project.py --file /tmp/project.json
+make check
+git add data/projects.json README.md
+git commit -m "Add project name"
+git push -u origin add-project-name
+gh pr create --fill
+```
+
+If you edit `data/projects.json` directly, run `python3 scripts/render_catalog.py` before `make check`. Do not edit the generated README table by hand.
 
 ## Update builder information
 

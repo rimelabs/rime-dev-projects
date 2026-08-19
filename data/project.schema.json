@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rimelabs/rime-dev-projects/blob/main/data/project.schema.json",
+  "title": "Voice AI catalog project input",
+  "description": "Input accepted by scripts/add_project.py. The script creates slug and event_order.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "project_type",
+    "team_name",
+    "source_url",
+    "summary",
+    "team_members"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_type": {
+      "enum": [
+        "Application",
+        "Integration",
+        "Adapter",
+        "Evaluation resource",
+        "Developer tool",
+        "Reference example"
+      ]
+    },
+    "team_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event": {
+      "type": "string",
+      "minLength": 1,
+      "default": "Community projects"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "article_url": {
+      "$ref": "#/$defs/optionalUrl"
+    },
+    "live_demo_url": {
+      "$ref": "#/$defs/optionalUrl"
+    },
+    "demo_video_url": {
+      "$ref": "#/$defs/optionalUrl"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "team_members": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/teamMember"
+      }
+    }
+  },
+  "$defs": {
+    "optionalUrl": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "teamMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "linkedin": {
+          "$ref": "#/$defs/optionalUrl"
+        },
+        "github": {
+          "$ref": "#/$defs/optionalUrl"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "linkedin"
+          ],
+          "properties": {
+            "linkedin": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "required": [
+            "github"
+          ],
+          "properties": {
+            "github": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
