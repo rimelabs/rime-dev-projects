@@ -4,7 +4,7 @@
 
 ## Checks
 
-- [ ] Rime is used in the project’s primary voice experience.
+- [ ] Rime is a meaningful part of the project, or this work is directly useful to developers building with Rime.
 - [ ] The source repository is public and contains no live credentials.
 - [ ] Builder names and profile links were provided by the builders or copied from profiles they control.
 - [ ] `python3 scripts/check_catalog.py` passes.

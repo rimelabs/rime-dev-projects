@@ -167,9 +167,7 @@ def render_catalog(projects: list[dict]) -> str:
     for project in projects:
         grouped.setdefault(project["event"], []).append(project)
 
-    event_count = len(grouped)
-    event_label = "developer event" if event_count == 1 else "developer events"
-    chunks = [f"_Featuring {len(projects)} projects across {event_count} {event_label}._"]
+    chunks = [f"_Featuring {len(projects)} projects._"]
     for event, event_projects in grouped.items():
         chunks.extend(
             [

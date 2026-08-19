@@ -2,7 +2,7 @@
 
 # Projects built with Rime
 
-A growing collection of voice applications built at hackathons and developer events.
+A growing collection of voice applications, integrations, and developer tools built with Rime at events and across the wider community.
 
 [Rime](https://www.rime.ai/) · [Documentation](https://docs.rime.ai/) · [Get an API key](https://app.rime.ai/) · [Add a project](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml)
 
@@ -10,10 +10,10 @@ A growing collection of voice applications built at hackathons and developer eve
 
 ## Explore the projects
 
-The catalog links each project’s source, technical write-up, demo video when one is available, and public profiles for its builders. Missing links are left blank instead of inferred.
+The projects remain in their builders’ own repositories; this catalog makes the work easier to discover. Each entry explains what was built and links to its public source, demo video when one is available, and builder profiles. Missing links are left blank instead of inferred.
 
 <!-- PROJECTS:START -->
-_Featuring 14 projects across 1 developer event._
+_Featuring 14 projects._
 
 ### StarForge 2026 — VoxForge
 
@@ -37,4 +37,4 @@ _Featuring 14 projects across 1 developer event._
 
 ## Add or update a project
 
-Open an [add-project request](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml) or submit a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for the catalog format and validation commands.
+Open an [add-project request](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml) or submit a pull request. Event projects, independent community builds, integrations, and reusable tooling are welcome when Rime is a meaningful part of the work. See [CONTRIBUTING.md](CONTRIBUTING.md) for the catalog format and validation commands.

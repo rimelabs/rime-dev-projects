@@ -1,5 +1,5 @@
 name: Add or update a project
-description: Propose a developer-event project for the Rime catalog.
+description: Propose a project, integration, or developer tool for the Rime catalog.
 title: "[Project]: "
 labels:
   - project-submission
@@ -7,10 +7,9 @@ body:
   - type: input
     id: event
     attributes:
-      label: Developer event
+      label: Developer event (if applicable)
+      description: Leave this blank if the project was built independently.
       placeholder: Event name and year
-    validations:
-      required: true
   - type: input
     id: project
     attributes:
@@ -28,7 +27,7 @@ body:
     id: summary
     attributes:
       label: Brief executive summary
-      description: In one or two sentences, explain what the project does and why voice matters.
+      description: In one or two sentences, explain what the project does, how Rime is used, and why the work is useful.
     validations:
       required: true
   - type: input
@@ -60,7 +59,7 @@ body:
     attributes:
       label: Publication checks
       options:
-        - label: Rime-generated speech is a meaningful part of the primary product experience.
+        - label: Rime is a meaningful part of the project, or this work is directly useful to developers building with Rime.
           required: true
         - label: The linked repository does not contain live credentials or private data.
           required: true
