@@ -115,7 +115,11 @@ def render_project(project: dict) -> str:
 
 
 def render_repository(url: str) -> str:
-    return image_link("View source on GitHub", url, GITHUB_BADGE)
+    repository_name = urlparse(url).path.strip("/")
+    return (
+        f"[{escape_cell(repository_name)}]({url})<br>"
+        f"{image_link('View source on GitHub', url, GITHUB_BADGE)}"
+    )
 
 
 def render_demo(url: str | None) -> str:
