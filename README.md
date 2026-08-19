@@ -12,9 +12,6 @@ A growing collection of voice applications, integrations, and developer tools bu
 
 The projects remain in their builders’ own repositories; this catalog makes the work easier to discover. Each entry explains what was built and links to its public source, live experience or demo video when available, and builder profiles. Missing links are left blank instead of inferred.
 
-<!-- PROJECTS:START -->
-_Featuring 14 projects._
-
 ### StarForge 2026 — VoxForge
 
 | Project | Brief executive summary | Repository | Demo | Team members |
