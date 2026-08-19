@@ -2,13 +2,15 @@
   {
     "slug": "continuum-voice-commerce",
     "name": "Continuum",
+    "project_type": "Application",
     "team_name": "Omnicient",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 1,
     "source_url": "https://github.com/irohitsharma21/hack_voice",
     "article_url": "https://github.com/irohitsharma21/hack_voice#readme",
     "demo_video_url": "https://drive.google.com/file/d/1SUXZNfavcut8Enmop85HiRxJWTlMSTWn/view?usp=sharing",
-    "summary": "A multilingual voice-commerce agent that preserves a customer’s cart across disconnected calls and reconciles interruptions with the words the caller actually heard.",
+    "live_demo_url": null,
+    "summary": "A multilingual commerce agent that keeps a customer's cart after a disconnected call and uses the caller's words to resolve interruptions.",
     "team_members": [
       {
         "name": "Rohit Sharma",
@@ -20,13 +22,15 @@
   {
     "slug": "roger-ai",
     "name": "Roger AI",
+    "project_type": "Application",
     "team_name": "Suspended",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 2,
     "source_url": "https://github.com/Sahil-coder-30/Flight_Prep_Voice_Agent",
     "article_url": "https://github.com/Sahil-coder-30/Flight_Prep_Voice_Agent#readme",
     "demo_video_url": "https://drive.google.com/file/d/1ZcEv2r2W9IuRClMPy-Tv5-ten1NBiCam/view?usp=sharing",
-    "summary": "An air-traffic-control training simulator that gives pilots a voice-native practice environment grounded in FAA and ICAO material, with layered caching to keep exchanges responsive.",
+    "live_demo_url": null,
+    "summary": "A voice simulator where pilots practice air traffic control with FAA and ICAO material. The system uses a cache to reduce response time.",
     "team_members": [
       {
         "name": "Sahil Sharma",
@@ -48,13 +52,15 @@
   {
     "slug": "fieldmate",
     "name": "FieldMate",
+    "project_type": "Application",
     "team_name": "Syntax Syndicate",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 3,
     "source_url": "https://github.com/esotericdunce/FieldMate",
     "article_url": "https://github.com/esotericdunce/FieldMate#readme",
     "demo_video_url": null,
-    "summary": "A hands-free PC troubleshooting assistant that combines live voice, camera input, and persistent diagnostic memory for technicians working away from a keyboard.",
+    "live_demo_url": null,
+    "summary": "A hands-free assistant that uses live voice, camera input, and diagnostic memory to help technicians repair computers away from a keyboard.",
     "team_members": [
       {
         "name": "Arsh Bhardwaj",
@@ -71,13 +77,15 @@
   {
     "slug": "jan-vaani",
     "name": "Jan Vaani",
+    "project_type": "Application",
     "team_name": "Devastators",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 4,
     "source_url": "https://github.com/SahityaThakurela/Jan-Vaani",
     "article_url": "https://github.com/SahityaThakurela/Jan-Vaani#readme",
     "demo_video_url": null,
-    "summary": "A multilingual welfare-access assistant that uses voice for intake and a deterministic rules engine to produce auditable government-scheme eligibility guidance.",
+    "live_demo_url": null,
+    "summary": "A multilingual voice assistant that collects user information and applies fixed rules to identify eligible government programs.",
     "team_members": [
       {
         "name": "Sambhav Gupta",
@@ -104,13 +112,15 @@
   {
     "slug": "saathi-medication-check-ins",
     "name": "Saathi",
+    "project_type": "Application",
     "team_name": "AceCoders",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 5,
     "source_url": "https://github.com/theadivai/Sathi",
     "article_url": "https://github.com/theadivai/Sathi#readme",
     "demo_video_url": null,
-    "summary": "A family medication check-in system that places multilingual phone calls, remembers adherence, and escalates to caregivers using explicit thresholds.",
+    "live_demo_url": null,
+    "summary": "A medication system that calls family members in multiple languages, records adherence, and alerts caregivers at set thresholds.",
     "team_members": [
       {
         "name": "shivasharma-bit",
@@ -127,13 +137,15 @@
   {
     "slug": "eira",
     "name": "EIRA",
+    "project_type": "Application",
     "team_name": "Spark",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 6,
     "source_url": "https://github.com/SPKaditya/EIRA",
     "article_url": "https://github.com/SPKaditya/EIRA#readme",
     "demo_video_url": "https://youtu.be/KCWBykuqW8o",
-    "summary": "A proactive voice companion that turns wellness signals and conversational memory into explained nudges, with visible evidence and consent-aware escalation.",
+    "live_demo_url": null,
+    "summary": "A voice companion that uses wellness data and conversation history to explain reminders, show evidence, and request consent before it escalates a case.",
     "team_members": [
       {
         "name": "Aditya Sharma",
@@ -145,13 +157,15 @@
   {
     "slug": "nova-industrial-safety",
     "name": "NOVA",
+    "project_type": "Application",
     "team_name": "dotbin (.bin)",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 7,
     "source_url": "https://github.com/sachdeva-aarushi/nova",
     "article_url": "https://github.com/sachdeva-aarushi/nova#readme",
     "demo_video_url": null,
-    "summary": "An industrial-safety agent that correlates live signals, retrieves incident memory, explains compound risks, asks for authorization, and learns from resolved cases.",
+    "live_demo_url": null,
+    "summary": "An industrial safety agent that compares live signals with past incidents, explains combined risks, asks for approval, and records resolved cases.",
     "team_members": [
       {
         "name": "Aarushi Sachdeva",
@@ -178,13 +192,15 @@
   {
     "slug": "vaani-health-companion",
     "name": "Vaani",
+    "project_type": "Application",
     "team_name": "Cumbrous",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 8,
     "source_url": "https://github.com/ShreyanshShri/vaani",
     "article_url": "https://github.com/ShreyanshShri/vaani#readme",
     "demo_video_url": null,
-    "summary": "A multilingual health companion that combines streaming voice interaction with structured records and semantic memory for persistent follow-up conversations.",
+    "live_demo_url": null,
+    "summary": "A multilingual health companion that uses live voice, structured records, and conversation memory to continue health discussions across sessions.",
     "team_members": [
       {
         "name": "Shreyansh Shrivastva",
@@ -206,13 +222,15 @@
   {
     "slug": "aarvi",
     "name": "AARVI",
+    "project_type": "Application",
     "team_name": "git_ignore",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 9,
     "source_url": "https://github.com/parkhhi15/aarvi_modelcheck",
     "article_url": "https://github.com/parkhhi15/aarvi_modelcheck#readme",
     "demo_video_url": "https://drive.google.com/file/d/1Sf_TcIEpDaXeV31ZdVGcIw6ohXIebVNi/view?usp=drivesdk",
-    "summary": "A voice receptionist for healthcare websites that guides patient intake, answers common questions, and routes requests through a spoken interface.",
+    "live_demo_url": "https://aarvi-modelcheck.vercel.app",
+    "summary": "A voice receptionist for healthcare websites. It collects patient information, answers common questions, and directs requests through a spoken interface.",
     "team_members": [
       {
         "name": "Parkhhi Saxena",
@@ -229,13 +247,15 @@
   {
     "slug": "continuum-interview-practice",
     "name": "Continuum — Interview Practice",
+    "project_type": "Application",
     "team_name": "Binary Brains",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 10,
     "source_url": "https://github.com/ujjwalverma-dev/continue-where-i-left-off",
     "article_url": "https://github.com/ujjwalverma-dev/continue-where-i-left-off#readme",
     "demo_video_url": "https://youtu.be/kdfuuF3q84I",
-    "summary": "A voice-first interview-practice experience that saves a learner’s progress and resumes the conversation from where the previous session ended.",
+    "live_demo_url": "https://continue-pied-nine.vercel.app",
+    "summary": "An interview practice app that saves a learner's progress and resumes the next voice session at the previous stopping point.",
     "team_members": [
       {
         "name": "Ujjwal Verma",
@@ -252,13 +272,15 @@
   {
     "slug": "wagelens",
     "name": "WageLens",
+    "project_type": "Application",
     "team_name": "cin>>errs",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 11,
     "source_url": "https://github.com/i-ayushh18/WageLens",
     "article_url": "https://github.com/i-ayushh18/WageLens#readme",
     "demo_video_url": "https://youtu.be/SvG1HuaTTmQ",
-    "summary": "A voice-assisted wage-rights checker that captures employment details and presents eligibility guidance in a more accessible spoken flow.",
+    "live_demo_url": null,
+    "summary": "A voice assistant that collects employment details and explains whether a worker can qualify for wage protections.",
     "team_members": [
       {
         "name": "Ayush Verma",
@@ -275,13 +297,15 @@
   {
     "slug": "nuvia",
     "name": "Nuvia",
+    "project_type": "Application",
     "team_name": "VoxVerse",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 12,
     "source_url": "https://github.com/Dakshchandia/Nuvia",
     "article_url": "https://github.com/Dakshchandia/Nuvia#readme",
     "demo_video_url": null,
-    "summary": "A bilingual health companion for symptom journaling and follow-up conversations, with persistent memory and an offline fallback for demonstrations.",
+    "live_demo_url": "https://nuvia-lake-ten.vercel.app",
+    "summary": "A bilingual health companion that records symptoms, remembers prior conversations, and includes an offline mode for demos.",
     "team_members": [
       {
         "name": "Daksh Chandia",
@@ -298,13 +322,15 @@
   {
     "slug": "routinecraft-ai",
     "name": "RoutineCraft AI",
+    "project_type": "Application",
     "team_name": "Risers4",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 13,
     "source_url": "https://github.com/Akshat-builds433/RoutineCraftAI",
     "article_url": "https://github.com/Akshat-builds433/RoutineCraftAI#readme",
     "demo_video_url": null,
-    "summary": "A voice-assisted timetable planner that speaks responses clause by clause for faster perceived feedback and supports interruption during playback.",
+    "live_demo_url": null,
+    "summary": "A voice timetable planner that speaks each response in short sections and lets the user interrupt playback.",
     "team_members": [
       {
         "name": "Akshat-builds433",
@@ -316,13 +342,15 @@
   {
     "slug": "vira",
     "name": "VIRA",
+    "project_type": "Application",
     "team_name": "Bro_code",
     "event": "StarForge 2026 — VoxForge",
     "event_order": 14,
     "source_url": "https://github.com/upshivansh2006-cell/VIRA-Finale",
     "article_url": "https://github.com/upshivansh2006-cell/VIRA-Finale#readme",
     "demo_video_url": "https://drive.google.com/file/d/1xhxP2ifcK_A39g3xGHJTB69JHmA5JLFS/view?usp=drivesdk",
-    "summary": "A voice safety assistant that retrieves a relevant protocol and speaks concise guidance for the situation described by the user.",
+    "live_demo_url": null,
+    "summary": "A voice safety assistant that finds a safety procedure for the user's situation and reads brief instructions aloud.",
     "team_members": [
       {
         "name": "upshivansh2006-cell",

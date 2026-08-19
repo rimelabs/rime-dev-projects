@@ -1,5 +1,5 @@
 name: Add or update a project
-description: Propose a developer-event project for the Rime catalog.
+description: Propose a project, integration, or developer tool for the Rime catalog.
 title: "[Project]: "
 labels:
   - project-submission
@@ -7,14 +7,26 @@ body:
   - type: input
     id: event
     attributes:
-      label: Developer event
+      label: Developer event (if applicable)
+      description: Leave this blank if the project was built independently.
       placeholder: Event name and year
-    validations:
-      required: true
   - type: input
     id: project
     attributes:
       label: Project name
+    validations:
+      required: true
+  - type: dropdown
+    id: project_type
+    attributes:
+      label: Project type
+      options:
+        - Application
+        - Integration
+        - Adapter
+        - Evaluation resource
+        - Developer tool
+        - Reference example
     validations:
       required: true
   - type: input
@@ -28,7 +40,7 @@ body:
     id: summary
     attributes:
       label: Brief executive summary
-      description: In one or two sentences, explain what the project does and why voice matters.
+      description: In one or two sentences, explain what the project does, how Rime is used, and why the work is useful.
     validations:
       required: true
   - type: input
@@ -36,6 +48,11 @@ body:
     attributes:
       label: Article or technical write-up
       description: Optional. A repository README is acceptable.
+  - type: input
+    id: live_demo
+    attributes:
+      label: Live demo
+      description: Optional. A publicly accessible experience people can try.
   - type: input
     id: demo
     attributes:
@@ -51,8 +68,8 @@ body:
   - type: textarea
     id: rime
     attributes:
-      label: How the project uses Rime
-      description: Point to the primary voice flow and the relevant source files.
+      label: How the project uses or supports Rime
+      description: Point to the primary voice flow, integration, or relevant source files.
     validations:
       required: true
   - type: checkboxes
@@ -60,7 +77,7 @@ body:
     attributes:
       label: Publication checks
       options:
-        - label: Rime-generated speech is a meaningful part of the primary product experience.
+        - label: Rime is a meaningful part of the project, or this work is directly useful to developers building with Rime.
           required: true
         - label: The linked repository does not contain live credentials or private data.
           required: true

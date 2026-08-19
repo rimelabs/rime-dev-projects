@@ -13,15 +13,44 @@ END_MARKER = "<!-- PROJECTS:END -->"
 REQUIRED_FIELDS = {
     "slug",
     "name",
+    "project_type",
     "team_name",
     "event",
     "event_order",
     "source_url",
     "article_url",
+    "live_demo_url",
     "demo_video_url",
     "summary",
     "team_members",
 }
+PROJECT_TYPES = {
+    "Application",
+    "Integration",
+    "Adapter",
+    "Evaluation resource",
+    "Developer tool",
+    "Reference example",
+}
+
+GITHUB_BADGE = "https://badges.aleen42.com/src/github.svg"
+YOUTUBE_BADGE = "https://badges.aleen42.com/src/youtube.svg"
+DRIVE_BADGE = (
+    "https://img.shields.io/badge/Google_Drive-4285F4"
+    "?style=flat&logo=googledrive&logoColor=white"
+)
+VIDEO_BADGE = (
+    "https://img.shields.io/badge/Watch-demo-6E56CF"
+    "?style=flat&logo=playstation&logoColor=white"
+)
+LIVE_BADGE = (
+    "https://img.shields.io/badge/Try_live-4F46E5"
+    "?style=flat&logo=googlechrome&logoColor=white"
+)
+LINKEDIN_BADGE = (
+    "https://img.shields.io/badge/LinkedIn-0A66C2"
+    "?style=flat&logo=linkedin&logoColor=white"
+)
 
 
 def load_projects() -> list[dict]:
@@ -57,10 +86,14 @@ def validate_projects(projects: list[dict]) -> list[str]:
         if not isinstance(project["event_order"], int) or project["event_order"] < 1:
             errors.append(f"{label}: event_order must be a positive integer")
 
+        if project["project_type"] not in PROJECT_TYPES:
+            allowed = ", ".join(sorted(PROJECT_TYPES))
+            errors.append(f"{label}: project_type must be one of: {allowed}")
+
         if not is_http_url(project["source_url"]):
             errors.append(f"{label}: source_url must be an HTTP(S) URL")
 
-        for field in ("article_url", "demo_video_url"):
+        for field in ("article_url", "live_demo_url", "demo_video_url"):
             value = project[field]
             if value is not None and not is_http_url(value):
                 errors.append(f"{label}: {field} must be null or an HTTP(S) URL")
@@ -90,20 +123,66 @@ def escape_cell(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ").strip()
 
 
-def link(label: str, url: str | None) -> str:
-    return f"[{escape_cell(label)}]({url})" if url else "—"
+def image_link(label: str, url: str, image_url: str, *, height: int | None = None) -> str:
+    size = f' height="{height}"' if height else ""
+    return f'<a href="{url}"><img src="{image_url}" alt="{label}"{size}></a>'
+
+
+def render_project(project: dict) -> str:
+    return f"**{escape_cell(project['name'])}**"
+
+
+def render_repository(url: str) -> str:
+    repository_name = urlparse(url).path.strip("/")
+    return (
+        f"[{escape_cell(repository_name)}]({url})<br>"
+        f"{image_link('View source on GitHub', url, GITHUB_BADGE)}"
+    )
+
+
+def render_demo(live_url: str | None, video_url: str | None) -> str:
+    links: list[str] = []
+    if live_url:
+        links.append(image_link("Try the live demo", live_url, LIVE_BADGE))
+
+    if not video_url:
+        return "<br>".join(links)
+    hostname = urlparse(video_url).netloc.lower()
+    if "youtu.be" in hostname or "youtube.com" in hostname:
+        badge = YOUTUBE_BADGE
+        label = "Watch on YouTube"
+    elif "drive.google.com" in hostname:
+        badge = DRIVE_BADGE
+        label = "Watch on Google Drive"
+    else:
+        badge = VIDEO_BADGE
+        label = "Watch the demo"
+    links.append(image_link(label, video_url, badge))
+    return "<br>".join(links)
 
 
 def render_team(project: dict) -> str:
     members: list[str] = []
     for member in project["team_members"]:
         if member.get("linkedin"):
-            members.append(link(member["name"], member["linkedin"]))
+            profile = image_link(
+                f"{member['name']} on LinkedIn",
+                member["linkedin"],
+                LINKEDIN_BADGE,
+                height=16,
+            )
         elif member.get("github"):
-            members.append(f"{link(member['name'], member['github'])} _(GitHub)_")
+            profile = image_link(
+                f"{member['name']} on GitHub",
+                member["github"],
+                GITHUB_BADGE,
+                height=16,
+            )
         else:
-            members.append(escape_cell(member["name"]))
-    return f"**{escape_cell(project['team_name'])}**<br>" + " · ".join(members)
+            profile = ""
+        member_name = escape_cell(member["name"]).replace(" ", "&nbsp;")
+        members.append(f"•&nbsp;{member_name}&nbsp;{profile}".rstrip())
+    return f"**{escape_cell(project['team_name'])}**<br>" + " ".join(members)
 
 
 def render_catalog(projects: list[dict]) -> str:
@@ -111,16 +190,14 @@ def render_catalog(projects: list[dict]) -> str:
     for project in projects:
         grouped.setdefault(project["event"], []).append(project)
 
-    event_count = len(grouped)
-    event_label = "developer event" if event_count == 1 else "developer events"
-    chunks = [f"_Featuring {len(projects)} projects across {event_count} {event_label}._"]
+    chunks: list[str] = []
     for event, event_projects in grouped.items():
         chunks.extend(
             [
                 "",
                 f"### {escape_cell(event)}",
                 "",
-                "| Project | Brief executive summary | Article / write-up | Demo video | Team members |",
+                "| Project | What it does | Repository | Demo | Team members |",
                 "| --- | --- | --- | --- | --- |",
             ]
         )
@@ -129,10 +206,10 @@ def render_catalog(projects: list[dict]) -> str:
                 "| "
                 + " | ".join(
                     [
-                        link(project["name"], project["source_url"]),
+                        render_project(project),
                         escape_cell(project["summary"]),
-                        link("Read", project["article_url"]),
-                        link("Watch", project["demo_video_url"]),
+                        render_repository(project["source_url"]),
+                        render_demo(project["live_demo_url"], project["demo_video_url"]),
                         render_team(project),
                     ]
                 )
