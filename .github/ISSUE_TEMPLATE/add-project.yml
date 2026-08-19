@@ -1,5 +1,5 @@
 name: Add or update a project
-description: Propose a project, integration, or developer tool for the Rime catalog.
+description: Propose a project, integration, best practice, or tool for the voice AI catalog.
 title: "[Project]: "
 labels:
   - project-submission
@@ -40,7 +40,7 @@ body:
     id: summary
     attributes:
       label: Brief executive summary
-      description: In one or two sentences, explain what the project does, how Rime is used, and why the work is useful.
+      description: In one or two sentences, explain what the project does, how it uses voice, and why the work is useful.
     validations:
       required: true
   - type: input
@@ -66,10 +66,10 @@ body:
     validations:
       required: true
   - type: textarea
-    id: rime
+    id: voice
     attributes:
-      label: How the project uses or supports Rime
-      description: Point to the primary voice flow, integration, or relevant source files.
+      label: How the project uses voice
+      description: Point to the primary voice flow, integration, or relevant source files. Include the Rime implementation if the project uses Rime.
     validations:
       required: true
   - type: checkboxes
@@ -77,7 +77,7 @@ body:
     attributes:
       label: Publication checks
       options:
-        - label: Rime is a meaningful part of the project, or this work is directly useful to developers building with Rime.
+        - label: Voice is a meaningful part of the project, or the work is directly useful to voice AI developers.
           required: true
         - label: The linked repository does not contain live credentials or private data.
           required: true

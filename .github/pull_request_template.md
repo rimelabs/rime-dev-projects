@@ -4,7 +4,7 @@
 
 ## Checks
 
-- [ ] Rime is a meaningful part of the project, or this work is directly useful to developers building with Rime.
+- [ ] Voice is a meaningful part of the project, or the work is directly useful to voice AI developers.
 - [ ] The source repository is public and contains no live credentials.
 - [ ] The repository contains enough documentation to understand the implementation.
 - [ ] Builder names and profile links were provided by the builders or copied from profiles they control.
