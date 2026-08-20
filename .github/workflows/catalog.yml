@@ -21,11 +21,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate project data
-        run: python3 scripts/check_catalog.py
+      - name: Set up just
+        uses: extractions/setup-just@v3
 
-      - name: Check generated README
-        run: python3 scripts/render_catalog.py --check
-
-      - name: Test contribution CLI
-        run: python3 -m unittest discover -s tests
+      - name: Check catalog
+        run: just check

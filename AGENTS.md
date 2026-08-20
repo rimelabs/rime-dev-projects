@@ -15,8 +15,8 @@ This repository is a catalog. Project source code stays in each builder's reposi
 1. Examine the source repository and use only facts that it contains.
 2. Do not invent demo links, team profiles, performance claims, or affiliations.
 3. Copy `data/project.example.json` to a temporary file and update its values.
-4. Run `python3 scripts/add_project.py --file /path/to/project.json`.
-5. Run `make check`.
+4. Run `just add /path/to/project.json`.
+5. Run `just check`.
 6. Review the generated README row and the full diff.
 7. Open a pull request. Do not push directly to `main`.
 
@@ -32,8 +32,8 @@ The add script creates the slug and event order. It also updates the generated R
 ## Commands
 
 ```bash
-python3 scripts/add_project.py --file /path/to/project.json
-python3 scripts/render_catalog.py
-python3 scripts/check_catalog.py
-make check
+just add /path/to/project.json
+just render
+just test
+just check
 ```

@@ -151,7 +151,7 @@ def main() -> int:
         DATA_PATH.write_text(json.dumps(updated_projects, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         README_PATH.write_text(rendered_readme, encoding="utf-8")
         print(f"Added {project['name']} as {project['slug']} in {project['event']}.")
-        print("Run make check, review the diff, and open a pull request.")
+        print("Run just check, review the diff, and open a pull request.")
         return 0
     except ValueError as error:
         print(f"Cannot add project: {error}", file=sys.stderr)
