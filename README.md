@@ -1,5 +1,12 @@
 <div align="center">
 
+<a href="https://www.rime.ai/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/rime-logo-white.svg">
+    <img src="assets/rime-logo-ink.svg" alt="Rime" width="160">
+  </picture>
+</a>
+
 # Voice AI with Rime
 
 A collection of voice applications built by the voice AI developer community with Rime and other voice technologies.
