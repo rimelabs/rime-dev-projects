@@ -45,6 +45,12 @@ Each project stays in its builder's repository. This catalog links to public sou
 | Project | What it does | Repository | Demo | Team members |
 | --- | --- | --- | --- | --- |
 | **Rime Voice Demo: AI4 Booth Edition** | A conference booth demo where visitors choose an industry and Rime voice, then talk with a LiveKit agent that supports natural turn-taking and interruptions. | [ankit1khare/rime-voice-agent](https://github.com/ankit1khare/rime-voice-agent)<br><a href="https://github.com/ankit1khare/rime-voice-agent"><img src="https://badges.aleen42.com/src/github.svg" alt="View source on GitHub"></a> |  | **Rime**<br>•&nbsp;Ankit&nbsp;Khare&nbsp;<a href="https://github.com/ankit1khare"><img src="https://badges.aleen42.com/src/github.svg" alt="Ankit Khare on GitHub" height="16"></a> |
+
+### Community projects
+
+| Project | What it does | Repository | Demo | Team members |
+| --- | --- | --- | --- | --- |
+| **Voice agent client playbook** | A LiveKit and Rime reference agent that turns a document-reminder workflow into a testable inbound call. It includes a customer worksheet, a two-day demo plan, and a four-week path to pilot for teams new to voice AI. | [ankit1khare/voice-agent-client-playbook](https://github.com/ankit1khare/voice-agent-client-playbook)<br><a href="https://github.com/ankit1khare/voice-agent-client-playbook"><img src="https://badges.aleen42.com/src/github.svg" alt="View source on GitHub"></a> |  | **Rime**<br>•&nbsp;Ankit&nbsp;Khare&nbsp;<a href="https://github.com/ankit1khare"><img src="https://badges.aleen42.com/src/github.svg" alt="Ankit Khare on GitHub" height="16"></a> |
 <!-- PROJECTS:END -->
 
 ## Add a project
