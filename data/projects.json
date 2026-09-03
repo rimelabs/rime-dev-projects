@@ -378,5 +378,25 @@
         "github": "https://github.com/ankit1khare"
       }
     ]
+  },
+  {
+    "slug": "voice-agent-client-playbook",
+    "name": "Voice agent client playbook",
+    "project_type": "Reference example",
+    "team_name": "Rime",
+    "event": "Community projects",
+    "event_order": 1,
+    "source_url": "https://github.com/ankit1khare/voice-agent-client-playbook",
+    "article_url": "https://github.com/ankit1khare/voice-agent-client-playbook/blob/main/ARTICLE.md",
+    "demo_video_url": null,
+    "live_demo_url": null,
+    "summary": "A LiveKit and Rime reference agent that turns a document-reminder workflow into a testable inbound call. It includes a customer worksheet, a two-day demo plan, and a four-week path to pilot for teams new to voice AI.",
+    "team_members": [
+      {
+        "name": "Ankit Khare",
+        "linkedin": null,
+        "github": "https://github.com/ankit1khare"
+      }
+    ]
   }
 ]
