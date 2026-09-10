@@ -54,9 +54,8 @@ Each project stays in its builder's repository. This catalog links to public sou
 <!-- PROJECTS:END -->
 
 ## Add a project
+AI4 2026
 
-Open an [add-project request](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml) or submit a pull request. You can contribute integrations, best practices, tools, or any project where voice is a meaningful part of the application.
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the catalog format and test commands.
-
-[Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Apache 2.0 License](LICENSE)
+| Project | What it does | Repository | Demo | Team members |
+| --- | --- | --- | --- | --- |
+| **MedSpeak** | A place where people can pronounce there own hard clinical terms , this AI help them to pronounce it. | [jay-z007/medspeak](https://github.com/Jay-z007/medspeak.git)<br>|
