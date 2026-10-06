@@ -9,7 +9,7 @@
 
 # Voice AI with Rime
 
-A collection of voice applications built by the voice AI developer community with Rime and other voice technologies.
+Voice projects from the developer community, each linked to source code you can read and run.
 
 [Rime](https://www.rime.ai/) · [Documentation](https://docs.rime.ai/) · [Get an API key](https://app.rime.ai/) · [Add a project](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml)
 
@@ -17,11 +17,11 @@ A collection of voice applications built by the voice AI developer community wit
 
 ## Projects
 
-Each project stays in its builder's repository. This catalog links to public source code, demos, and team profiles. It leaves unverified links blank.
+Every project lives in its builder's own repository. The tables group projects by the event where they were built. A blank cell means we don't have a verified link yet.
 
 <!-- PROJECTS:START -->
 
-### StarForge 2026 — VoxForge
+### StarForge 2026: VoxForge
 
 | Project | What it does | Repository | Demo | Team members |
 | --- | --- | --- | --- | --- |
@@ -53,10 +53,16 @@ Each project stays in its builder's repository. This catalog links to public sou
 | **Voice agent client playbook** | A LiveKit and Rime reference agent that turns a document-reminder workflow into a testable inbound call. It includes a customer worksheet, a two-day demo plan, and a four-week path to pilot for teams new to voice AI. | [ankit1khare/voice-agent-client-playbook](https://github.com/ankit1khare/voice-agent-client-playbook)<br><a href="https://github.com/ankit1khare/voice-agent-client-playbook"><img src="https://badges.aleen42.com/src/github.svg" alt="View source on GitHub"></a> |  | **Rime**<br>•&nbsp;Ankit&nbsp;Khare&nbsp;<a href="https://github.com/ankit1khare"><img src="https://badges.aleen42.com/src/github.svg" alt="Ankit Khare on GitHub" height="16"></a> |
 <!-- PROJECTS:END -->
 
+## Build your own
+
+Get an API key from the [Rime dashboard](https://app.rime.ai/) and start with the [five-minute quickstart](https://docs.rime.ai/docs/quickstart-five-minute). It sends one request and saves a Rime voice reading a short sentence to a WAV file. When you want a conversation instead of a file, the [LiveKit quickstart](https://docs.rime.ai/docs/quickstart-livekit) turns the same API into a real-time voice agent.
+
 ## Add a project
 
-Open an [add-project request](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml) or submit a pull request. You can contribute integrations, best practices, tools, or any project where voice is a meaningful part of the application.
+Built something where voice does real work? We'd like to list it, and it doesn't have to use Rime. Apps qualify, and so do the integrations and tools that help other people build voice AI.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the catalog format and test commands.
+The quickest way in is the [add-project form](https://github.com/rimelabs/rime-dev-projects/issues/new?template=add-project.yml). You'll need a public repository, a one- or two-sentence summary, and a pointer to where the project uses voice. List only builders who agreed to appear here.
+
+If you'd rather open a pull request, [CONTRIBUTING.md](CONTRIBUTING.md) explains the JSON entry and the `just` commands that check it.
 
 [Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Apache 2.0 License](LICENSE)
