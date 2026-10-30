@@ -398,5 +398,25 @@
         "github": "https://github.com/ankit1khare"
       }
     ]
+  },
+  {
+    "slug": "prism-hotel-agent-simulator",
+    "name": "Prism hotel agent simulator",
+    "project_type": "Evaluation resource",
+    "team_name": "Rime",
+    "event": "Community projects",
+    "event_order": 2,
+    "source_url": "https://github.com/ankit1khare/prism-hotel-agent-sim",
+    "article_url": null,
+    "demo_video_url": null,
+    "live_demo_url": null,
+    "summary": "A Prism voice agent that phones hotels to cancel a guest's reservations, tested against simulated hotels where Claude plays the staff and Rime TTS gives them voices. It shows how to enforce phone-call rules in code and how to grade each call for listening and decision errors.",
+    "team_members": [
+      {
+        "name": "Ankit Khare",
+        "linkedin": null,
+        "github": "https://github.com/ankit1khare"
+      }
+    ]
   }
 ]
